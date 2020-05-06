@@ -15,17 +15,9 @@ import { DonutDetailComponent } from './donut-detail/donut-detail.component';
 import { FamousPeopleComponent } from './famous-people/famous-people.component';
 import { FamousPersonDetailComponent } from './famous-person-detail/famous-person-detail.component';
 
-const appRoutes: Routes = [
-  { path: 'donuts', component: DonutsComponent },
-  { path: 'donuts/:id', component: DonutDetailComponent }
-];
-
 @NgModule({
   declarations: [AppComponent,IconSetComponent, DonutsComponent, DonutDetailComponent, FamousPeopleComponent, FamousPersonDetailComponent],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-    ),
     SparkAngularModule,
     BrowserAnimationsModule,
     BrowserModule,

@@ -21,7 +21,10 @@ export class DonutDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
 
-      this.donut = this.donutData.getDonuts()[this.id];
+      this.donutData.getDonutDetail(this.id).subscribe(
+        (data: DonutDetail) => this.donut = { ...data },
+        error => console.error(error)
+      );
     })
   }
 

@@ -15,9 +15,8 @@ export class DonutAPIService {
     return this.http.get<Donuts>(`${this.apiUrl}/donuts.json`);
   }
 
-  getDonutDetail(url:string) {
-    return this.http.get<DonutDetail>(url);
-
+  getDonutDetail(id:number) {
+    return this.http.get<DonutDetail>(`${this.apiUrl}/donuts/${id}.json`);
   }
 }
 
